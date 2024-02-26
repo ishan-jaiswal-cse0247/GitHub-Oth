@@ -13,8 +13,8 @@ import (
 )
 
 func main() {
-    // Provide your GitHub personal access token
-    githubToken := "YOUR_GITHUB_TOKEN"
+    // GitHub personal access token
+    githubToken := "5e4abf421189582dc5749d0b1bf6dafb23709179"
 
     // Create a GitHub client with OAuth2 authentication
     ctx := context.Background()
@@ -84,68 +84,3 @@ func parsePomXML(xmlContent string) ([]Dependency, error) {
 
     return project.Dependencies, nil
 }
-
-/*Here's a step-by-step guide to set up Go and complete the project:
-
-### Step 1: Install Go
-
-1. Download and install Go from the official website: [https://golang.org/dl/](https://golang.org/dl/)
-2. Follow the installation instructions provided for your operating system.
-
-### Step 2: Set up a GitHub Personal Access Token
-
-1. Go to your GitHub account settings.
-2. Navigate to Developer settings > Personal access tokens.
-3. Click on "Generate new token" and provide necessary permissions (e.g., `repo` scope).
-4. Copy the generated token.
-
-### Step 3: Set up Go Modules (Optional but recommended)
-
-1. Go modules enable dependency management within your Go projects.
-2. Enable Go modules by setting the environment variable `GO111MODULE` to `on`:
-    ```bash
-    export GO111MODULE=on
-    ```
-
-### Step 4: Install Required Packages
-
-1. Open a terminal or command prompt.
-2. Install the required Go packages using the `go get` command:
-    ```bash
-    go get github.com/google/go-github/v35/github
-    go get golang.org/x/oauth2
-    ```
-
-### Step 5: Write the Go Code
-
-1. Open your favorite text editor or integrated development environment (IDE).
-2. Write the Go code provided in the previous response. Save the file with a `.go` extension, for example, `main.go`.
-
-### Step 6: Update the Code with Your GitHub Token
-
-1. Replace `"YOUR_GITHUB_TOKEN"` in the code with the personal access token you generated earlier.
-
-### Step 7: Implement XML Parsing Logic
-
-1. Implement the `parsePomXML` function to parse the `pom.xml` files and extract dependencies. You can use Go's `encoding/xml` package or other XML parsing libraries.
-
-### Step 8: Test and Run the Code
-
-1. Navigate to the directory containing your Go code (`main.go`).
-2. Run the code using the `go run` command:
-    ```bash
-    go run main.go
-    ```
-
-### Step 9: Troubleshooting and Debugging
-
-1. If you encounter any errors or issues, carefully review the error messages and consult the documentation for the GitHub API and the Go libraries being used.
-2. Make sure your GitHub personal access token has the necessary permissions.
-3. Ensure that your XML parsing logic is correctly implemented.
-
-### Step 10: Iterate and Improve
-
-1. Test the parser with different repositories and handle edge cases.
-2. Refactor and improve your code as necessary based on feedback and additional requirements.
-
-By following these steps, you should be able to set up Go, authenticate with the GitHub API, retrieve repository information, fetch `pom.xml` files, parse XML content, and extract dependencies as per your project requirements.*/
